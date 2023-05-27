@@ -1,0 +1,50 @@
+
+<ion-content [fullscreen]="true">
+  <div class="flex-center">
+      <ion-card>
+        <div class="layer">
+        <img alt="Scrumy Robot" src="../../../assets/Cats.png" />
+        <ion-card-header>
+          <ion-card-title color="primary">Mort/Vivant</ion-card-title>
+        </ion-card-header>
+        <ion-card-subtitle class="subtitle">Essayez de deviner le nombre</ion-card-subtitle>
+        <ion-card-content>
+          <div class="value">
+            {{message}}
+            </div>
+                <ion-input type="tel" maxlength="4" label="Value input" label-placement="floating"  fill="outline" placeholder="Entrer votre nombre" (ionChange) = 'getValue($event)' />
+
+          <div class="buttons">
+            <ion-button shape="round" color="success"  (click) = 'onClickFunction($event)' >Répondre</ion-button>
+            <ion-button shape="round" color="warning" (click)='onReset($event)' >Réinitialiser</ion-button>
+          </div>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-content class="ion-padding">
+  <ion-button expand="block" (click)="setOpen(true)">Aide</ion-button>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Aide</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Fermer</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-card>
+          <ion-card-content>
+          <p>
+            Vous devez deviner le nombre généré aléatoirement. L'application vous dira si votre supposition a des chiffres présents dans le nombre mais que sa position est fausse, c'est-à-dire vivant, et si vous avez des chiffres présents et que leur position est correcte dans le nombre, c'est-à-dire mort.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

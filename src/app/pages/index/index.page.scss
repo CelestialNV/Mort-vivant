@@ -1,0 +1,58 @@
+ion-title{
+
+    text-align: center;
+
+}
+ionic-input{
+    max-width: 150px;
+
+    text-align: center;
+
+    margin: auto;
+
+
+    
+}
+
+.buttons{
+   
+    text-align: center;
+
+    margin: 24px;
+}
+
+.value{
+
+    margin: 32px;
+
+    text-align: center;
+
+}
+
+ion-content{ 
+    --background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 18%, rgba(0,212,255,1) 100%);
+}
+
+ion-card{
+    --background: white;
+}
+
+ion-card-title{
+    text-align: center;
+}
+
+
+ion-card-subtitle{
+    text-align: center;
+}
+
+
+img{
+    max-height: 300px;
+
+    min-width: 100%;
+}
+
+ion-button{
+    margin: 24px;
+}
