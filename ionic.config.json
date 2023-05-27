@@ -1,0 +1,7 @@
+{
+  "name": "DeadAlive",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
